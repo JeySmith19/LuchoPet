@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+:root {
+  /* Color primario: Verde oscuro */
+  --color-primary: #00796b;
+
+  /* Color secundario: Amarillo */
+  --color-secondary: #fbc02d;
+
+  /* Color de texto: Gris oscuro */
+  --color-text: #333;
+
+  /* Color de botón (hover): Verde oscuro claro */
+  --color-button-hover: #c09322;
+
+  /* Color de fondo blanco oscuro claro */
+  --color-background: #f5f2e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--color-background);
+}
+
+.banner {
+  margin-top: 120px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+}
+
+.banner-image {
+  width: 30%;
+  animation: bannerAnimation 4s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes bannerAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10%) rotate(10deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10%) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+
+.text-container {
+  text-align: center;
+  margin-right: 40px;
+}
+
+.banner h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: var(--color-button-hover);
+}
+
+/*Productos*/
+.tittle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.tittle h1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  color: var(--color-primary);
+}
+
+
+#product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-item {
+  width: 250px;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.product-details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-details h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.product-details p {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.product-details button {
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.product-details button:hover {
+  background-color: var(--color-button-hover);
+}
+
+/*Servicios*/
+.container-section {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+ margin-bottom: 50px;
+}
+
+.tittle-service {
+  margin-bottom: 10px; /* Ajusta el valor según tus necesidades */
+}
+
+.tittle-service h1 {
+  font-size: 36px;
+  color: #00796b;
+  margin-bottom: 5px;
+}
+
+.tittle-service p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 5px;
+}
+
+#services-section {
+  width: 100%;
+  height: calc(75vh - 50px); /* Ajusta disancia de titulo con servicios */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0; /* Ajusta el valor según tus necesidades */
+}
+
+.service {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f2e8;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.service.active {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.service.previous {
+  transform: translate(-150%, -50%);
+}
+
+.service img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
+.service h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.service p {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+
+
+/*Horario*/
+
+.container-horario {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  margin-bottom:40px ;
+}
+
+.container-horario h1 {
+  color: var(--color-primary);
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-secondary);
+}
+
+tr:hover {
+  background-color: var(--color-background);
+  cursor: pointer;
+}
+
+/*Ubicacion*/
+
+.horarios-ubicacion-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 70px;
+}
+
+.horarios-ubicacion-container h1 {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.direccion {
+  text-align: center;
+}
+
+.direccion-texto {
+  color: var(--color-text);
+}
+
+.numeros-contacto {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.numero-telefono,
+.numero-celular {
+  margin: 5px;
+}
+
+.numero-primario {
+  color: var(--color-primary);
+}
+
+.numero-secundario {
+  color: var(--color-secondary);
+}
+
+.email {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.email-texto {
+  color: var(--color-text);
+}
+
+/*Footer*/
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: 20px;
+}
+
+.container-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.contact-info h4,
+.social-media h4 {
+  margin-bottom: 10px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-media ul li {
+  margin-right: 10px;
+}
+
+.social-media ul li a {
+  color: var(--color-background);
+  font-size: 20px;
+  
+}
+
+.disclaimer {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--color-background);
+}
+
+/*Whatsapp*/
+
+#whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#whatsapp-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--color-primary);
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-size: 40px;
+  overflow: hidden;
+}
+
+#whatsapp-button a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  opacity: 0;
+  border-radius: 50%;
+  animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Consulta de medios para tablet */
+@media only screen and (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .text-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    margin-bottom: 10px;
+  }
+
+  .contact-info,
+  .social-media {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .social-media ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-media ul li {
+    margin-right: 5px;
+  }
+
+  .disclaimer {
+    margin-top: 10px;
+  }
+}
+
+/* Consulta de medios para celular */
+@media only screen and (max-width: 480px) {
+  .banner-image{
+    width: 75%;
+    height: auto;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+  
+  .banner p {
+    font-size: 16px;
+  }
+  
+  .button {
+    font-size: 14px;
+  }
+
+  #whatsapp-button a {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
