@@ -1,5 +1,5 @@
 function enviarWhatsapp(mensaje) {
-    const telefono = '+51925566082';
+    const telefono = '+51931533177';
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url);
   }
