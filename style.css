@@ -1,19 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 
 :root {
-  /* Color primario: Verde oscuro */
   --color-primary: #204c57;
-
-  /* Color secundario: Amarillo */
   --color-secondary: #ff3b3b;
-
-  /* Color de texto: Gris oscuro */
   --color-text: #3b3838;
-
-  /* Color de botón (hover): Verde oscuro claro */
   --color-button-hover: #ff8181;
-
-  /* Color de fondo blanco oscuro claro */
   --color-background: #f5f2e8;
 }
 
@@ -510,6 +501,9 @@ footer {
 
 /* Consulta de medios para tablet */
 @media only screen and (max-width: 768px) {
+  .logo-image{
+    width: 40%;
+  }
   .banner {
     flex-direction: column;
     text-align: center;
@@ -596,6 +590,11 @@ footer {
     width: 100%;
     height: 200px;
     margin: 10px 0;
+  }
+
+  #services-section {
+    height: calc(90vh - 50px);
+    
   }
   
 }
