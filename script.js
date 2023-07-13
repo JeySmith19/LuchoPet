@@ -32,19 +32,3 @@ function enviarWhatsapp(mensaje) {
   
   
 
-  function initMap() {
-    var location = { lat: -9.051226376912952, lng: -75.51615345949874 };
-  
-    var mapOptions = {
-      center: location,
-      zoom: 15
-    };
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  
-    var marker = new google.maps.Marker({
-      map: map,
-      position: location,
-      title: "Ubicación"
-    });
-  }
-  
