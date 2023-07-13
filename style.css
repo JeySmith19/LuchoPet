@@ -2,16 +2,16 @@
 
 :root {
   /* Color primario: Verde oscuro */
-  --color-primary: #00796b;
+  --color-primary: #204c57;
 
   /* Color secundario: Amarillo */
-  --color-secondary: #fbc02d;
+  --color-secondary: #ff3b3b;
 
   /* Color de texto: Gris oscuro */
-  --color-text: #333;
+  --color-text: #3b3838;
 
   /* Color de botón (hover): Verde oscuro claro */
-  --color-button-hover: #c09322;
+  --color-button-hover: #ff8181;
 
   /* Color de fondo blanco oscuro claro */
   --color-background: #f5f2e8;
@@ -30,6 +30,10 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
   background-color: var(--color-background);
+}
+
+.logo-image{
+  width: 30%;
 }
 
 .banner,
@@ -113,6 +117,11 @@ body {
 
 .button:hover {
   background-color: var(--color-button-hover);
+}
+
+.banner a{
+  font-weight: bold;
+  color: var(--color-background);
 }
 
 /*Productos*/
@@ -209,7 +218,7 @@ body {
 
 .tittle-service h1 {
   font-size: 36px;
-  color: #00796b;
+  color: var(--color-primary);
   margin-bottom: 5px;
 }
 
@@ -300,13 +309,19 @@ th, td {
   text-align: center;
 }
 
+td {
+  font-weight: bolder;
+  color: var(--color-text);
+}
+
 th {
   background-color: var(--color-primary);
   color: #fff;
+  font-size: 20px;
 }
 
 tr:nth-child(even) {
-  background-color: var(--color-secondary);
+  background-color: var(--color-button-hover);
 }
 
 tr:hover {
@@ -317,55 +332,84 @@ tr:hover {
 /*Ubicacion*/
 
 .horarios-ubicacion-container {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   padding: 20px;
-  padding-bottom: 70px;
 }
 
-.horarios-ubicacion-container h1 {
-  color: var(--color-primary);
+.tittle-ubi {
+  width: 100%;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.tittle-ubi h1 {
+  color: var(--color-primary);
+  font-size: 2em;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: 90px;
+  margin-left: 90px;
 }
 
 .contact-info {
-  margin-top: 20px;
+  width: 50%;
 }
 
-.direccion {
-  text-align: center;
-}
-
-.direccion-texto {
-  color: var(--color-text);
-}
-
-.numeros-contacto {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.numero-telefono,
-.numero-celular {
-  margin: 5px;
-}
-
-.numero-primario {
+.direccion h3,
+.numeros-contacto h3,
+.email h3 {
   color: var(--color-primary);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.direccion-texto,
+.numero-celular,
+.email-texto {
+  margin-bottom: 10px;
 }
 
 .numero-secundario {
   color: var(--color-secondary);
 }
 
-.email {
-  text-align: center;
-  margin-top: 10px;
+#map {
+  width: 80%;
+  height: 400px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.email-texto {
-  color: var(--color-text);
+.local {
+  width: 60%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px; /* Ajusta el valor del padding según tus necesidades */
+  margin-left: 50px;
+  background-color: #fff;
 }
+
+.local img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
 
 /*Footer*/
 footer {
@@ -463,6 +507,7 @@ footer {
   }
 }
 
+
 /* Consulta de medios para tablet */
 @media only screen and (max-width: 768px) {
   .banner {
@@ -502,6 +547,57 @@ footer {
   .disclaimer {
     margin-top: 10px;
   }
+
+
+  .horarios-ubicacion-container {
+    padding: 10px;
+  }
+
+  .tittle-ubi {
+    margin-bottom: 10px;
+  }
+
+  .tittle-ubi h1 {
+    font-size: 1.5em;
+  }
+
+  .cont {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .direccion h3,
+  .numeros-contacto h3,
+  .email h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .direccion-texto,
+  .numero-celular,
+  .email-texto {
+    margin-bottom: 5px;
+  }
+
+  .numero-secundario {
+    font-size: 12px;
+  }
+
+  #map {
+    width: 100%;
+  }
+
+  .local {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+  }
+  
 }
 
 /* Consulta de medios para celular */
