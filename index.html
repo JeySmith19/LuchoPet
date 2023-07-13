@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuchoPet</title>
+    <title>Lutch Pet</title>
     <link rel="stylesheet" href="nav/nav.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -11,8 +11,8 @@
 <body>
     <div class="nav">
         <div class="nav-logo">
-          <img src="img/huella.png" alt="Icono de la tienda de chocolate" class="logo-image">
-          <span class="logo-text">LuchoPet</span>
+          <img src="img/logo.png" alt="Icono de la tienda de chocolate" class="logo-image">
+          <!-- <span class="logo-text">LuchoPet</span> -->
         </div>
         <div class="nav-search">
           <div class="container-input">
@@ -41,7 +41,7 @@
 
       <div class="banner" id="home">
         <div class="text-container">
-          <h1>Bienvenido a LuchoPet</h1>
+          <h1>Bienvenido a Lutch Pet</h1>
           <p>Ofrecemos cuidado y atención para tus mascotas</p>
           <a href="#productos" class="button">Ver más</a>
         </div>
@@ -146,71 +146,91 @@
           <thead>
             <tr>
               <th>Día</th>
-              <th>Horario</th>
+              <th>Horario mañana</th>
+              <th>Horario tarde</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Lunes</td>
-              <td>9:00 - 18:00</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
             </tr>
             <tr>
               <td>Martes</td>
-              <td>9:00 - 18:00</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
             </tr>
             <tr>
               <td>Miércoles</td>
-              <td>9:00 - 18:00</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
             </tr>
             <tr>
               <td>Jueves</td>
-              <td>9:00 - 18:00</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
             </tr>
             <tr>
               <td>Viernes</td>
-              <td>9:00 - 18:00</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
             </tr>
             <tr>
               <td>Sábado</td>
-              <td>10:00 - 14:00</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
             </tr>
             <tr>
               <td>Domingo</td>
-              <td>Cerrado</td>
+              <td>8:00 - 1:00</td>
+              <td>cerrado</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="horarios-ubicacion-container" id="ubicacion">
-        <h1>Ubicación</h1>
+        <div class="tittle-ubi">
+          <h1>Ubicación</h1>
+        </div>
+        <div class="cont">
+          <!--primera columna-->
         <div class="contact-info">
           <div class="direccion">
             <h3>Dirección:</h3>
-            <p class="direccion-texto">Calle Principal 123, Ciudad, País</p>
+            <p class="direccion-texto">C.F.B Pampa Yurac, Jr. Luis Vasquez Suyo, Mz159 lote 11</p>
           </div>
           <div class="numeros-contacto">
             <h3>Números de Contacto:</h3>
-            <p class="numero-telefono">Teléfono: <span class="numero-primario">123-456-7890</span></p>
-            <p class="numero-celular">Celular: <span class="numero-secundario">987-654-3210</span></p>
+            <p class="numero-celular">Celular: <span class="numero-secundario">931-533-177</span></p>
           </div>
           <div class="email">
             <h3>Email:</h3>
-            <p class="email-texto">info@example.com</p>
+            <p class="email-texto">info@luchopet.com</p>
           </div>
         </div>
+        <!--segunda columna-->
+        <div id="map"></div>
+
+        <div class="local">
+          <img src="img/local.png" alt="local">
+        </div>
+        </div>
+        
       </div>
-      
+
+            
 
       <footer>
         <div class="container-footer">
           <div class="logo">
-            <img src="img/huella.png" alt="LuchoPet">
+            <img src="img/logo.png" alt="Lutch Pet">
           </div>
           <div class="contact-info">
             <h4>Contacto</h4>
-            <p>Dirección: Calle Principal, Ciudad</p>
-            <p>Teléfono: 123-456-7890</p>
+            <p>Dirección: C.F.B Pampa Yurac, Jr. Luis Vasquez Suyo, Mz159 lote 11</p>
+            <p>Teléfono: +51 931 533 177</p>
             <p>Email: info@luchopet.com</p>
           </div>
           <div class="social-media">
@@ -223,10 +243,10 @@
           </div>
         </div>
         <div class="disclaimer">
-          <p>Todos los derechos reservados &copy; LuchoPet</p>
+          <p>Todos los derechos reservados &copy; Lutch Pet</p>
         </div>
       </footer>
-      
+      <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_DE_API&callback=initMap" async defer></script>
       <script src="nav/nav.js"></script>
       <script src="script.js"></script>
 </body>
