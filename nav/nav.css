@@ -79,7 +79,7 @@
 @media (max-width: 768px) {
   .nav {
     position: fixed;
-    height: 60px;
+    height: 80px;
   }
 
   .nav-links {
@@ -104,7 +104,7 @@
   .nav-toggle {
     display: block;
     color: var(--color-background);
-    font-size: 24px;
+    font-size: 50px;
     cursor: pointer;
   }
 
