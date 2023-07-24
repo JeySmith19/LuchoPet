@@ -471,11 +471,12 @@ const productos = [
 ];
   
 // Función para crear el botón de compra en la tarjeta de producto
-function crearBotonCompra(numeroWhatsApp) {
+function crearBotonCompra(numeroWhatsApp, nombreProducto) {
   const botonCompra = document.createElement("button");
   botonCompra.textContent = "Comprar";
   botonCompra.addEventListener("click", () => {
-    window.open(`https://wa.me/${numeroWhatsApp}`, "_blank");
+    const mensaje = encodeURIComponent(`hola quiero comprar ${nombreProducto}`);
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, "_blank");
   });
   return botonCompra;
 }
@@ -515,8 +516,8 @@ function renderProductos(productos) {
     productDescription.textContent = producto.descripcion;
     productCard.appendChild(productDescription);
 
-    const botonCompra = crearBotonCompra("931533177"); // Número de WhatsApp para compra
-    productCard.appendChild(botonCompra);
+    const botonCompra = crearBotonCompra("931533177", producto.nombre); // Número de WhatsApp para compra
+        productCard.appendChild(botonCompra);
 
     productContainer.appendChild(productCard);
   });
