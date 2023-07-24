@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Veterinaria</title>
+  <link rel="stylesheet" href="producto.css">
+  <link rel="stylesheet" href="../nav/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../whatsapp/whatsapp.css">
+</head>
+<body>
+
+    <div class="nav">
+        <div class="nav-logo">
+          <img src="../img/logo.png" alt="Icono de la tienda de chocolate" class="logo-image">
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Inicio</a></li>
+          <li><a href="../index.html.#productos" class="nav-link">Productos</a></li>
+          <li><a href="../index.html.#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="../index.html.#horario" class="nav-link">Horarios</a></li>
+          <li><a href="../index.html.#ubicacion" class="nav-link">Ubicacion</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=931533177" class="nav-link">Contacto</a></li>
+        </ul>
+    </div>
+    <div id="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=931533177" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>      
+  <div class="sidebar">
+    <div id="cate">
+        <div class="pc">
+          <!--esta barra de busqueda siempre aparece en modo pc pero se desaparece cuando la pantalla se reduce--> 
+          <div class="search-barcito">
+            <input type="text" id="searchInput" placeholder="Buscar productos...">
+        </div>
+        </div>
+        <h2>Categorías</h2>
+        <ul id="categorias">
+          <!-- Aquí irá el código para las categorías -->
+        </ul>
+        <button id="verTodasCategorias">Ver todo</button>
+    </div>
+  </div>
+  <div class="container-prod">
+        <!--esta esta oculta en modo escritorio pero se muestra cuando la pantalla se encoge-->
+        <div class="main-content">
+          <h2>¿Qué estas buscando</h2>   
+          <div class="modo-responsive">
+            <div class="search-barcito">
+                <input type="text" id="searchInputResponsive" placeholder="Buscar productos...">
+            </div>
+            
+          </div>   
+          <div class="product-container" id="productContainer">
+            <!-- Aquí irá el código para mostrar los productos -->
+          </div>
+        </div>
+    
+  </div>
+  
+
+  <script src="clean.js"></script>
+  <script src="producto.js"></script>
+  <script src="../nav/nav.js"></script>
+  <script src="zoom.js"></script>
+  <script src="./categorias/comida.js"></script>
+</body>
+</html>

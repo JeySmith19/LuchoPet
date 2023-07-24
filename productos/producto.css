@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+:root {
+    --color-primary: #204c57;
+    --color-secondary: #ff3b3b;
+    --color-text: #3b3838;
+    --color-button-hover: #ff8181;
+    --color-background: #f5f2e8;
+}
+
+/* Resetear estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+  }
+  
+
+/* Estilos generales de la página */
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    width: 20%;
+    min-width: 270px;   /*ancho*/
+    min-height: 500px;
+    background-color: var(--color-primary);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.sidebar li:hover {
+    text-decoration: none;
+    color: var(--color-button-hover);
+}
+
+.sidebar button {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilos para el botón "Ver todas las categorías" */
+.sidebar button#verTodasCategorias {
+    background-color: var(--color-secondary);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.sidebar button#verTodasCategorias:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Estilos para el contenido principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 90px;
+    display: flex; /* Agregamos display flex para usar Flexbox */
+    flex-direction: column; /* Alineamos los elementos en columna */
+    align-items: center; /* Centramos horizontalmente los elementos */
+}
+
+.container-prod {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centramos verticalmente los elementos */
+    flex-direction: column; /* Alineamos los elementos en columna */
+}
+
+/*slider busqueda*/
+.search-barcito {
+    margin-bottom: 20px;
+    display: flex; /* Utilizamos Flexbox para centrar el contenido */
+    justify-content: center; /* Centramos horizontalmente el contenido */
+}
+
+.search-barcito input {
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-barcito input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+/*barra de busqueda en modo responsive se desactiva en modo pc*/
+.modo-responsive{
+    display: none; 
+  
+}
+
+/* Mejoramos el diseño para un solo producto */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.product-container .product-card {
+    flex: 1;
+}
+
+/* Añadimos una cuadrícula de 3 columnas para varios productos */
+@media (min-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    display: block;
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .modo-responsive{
+        /*la barra de busqueda aparece en modo responsive*/
+        display: flex;
+        justify-content: center; 
+        position: fixed;
+        z-index: 99;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+    .product-image {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    .product-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    h2 {
+        margin-top: 35px;
+      }
+}
+
+/* Agregar bordes y sombras a la barra de búsqueda */
+
+.search-barcito input {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las categorías */
+#cate {
+    position: fixed;
+}
+
+#categorias {
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+#categorias li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: var(--color-background);
+    transition: color 0.3s ease;
+  }
+  
+  #categorias li:hover,
+  #categorias li.active {
+    color: var(--color-button-hover);
+    font-weight: bold;
+  }
+
+
+/* Estilos para el botón "Ver todas las categorías" */
+#verTodasCategorias {
+    display: block;
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#verTodasCategorias:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .modo-responsive {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        z-index: 99;
+        top: 90px; /* Alineamos la barra de búsqueda debajo de la barra de navegación */
+        padding: 10px;
+        left: 0;
+        right: 0;
+    }
+    
+    .search-barcito {
+        width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+        max-width: 768px; /* Establecemos un ancho máximo para evitar que se agrande más */
+    }
+
+    .search-barcito input {
+        width: 80%;
+        max-width: 768px; /* Aseguramos que el input no supere el ancho máximo */
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.479);;
+        transition: border-color 0.3s ease;
+    }
+}

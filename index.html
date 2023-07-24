@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutch Pet</title>
+    <link rel="stylesheet" href="nav/nav.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="whatsapp/whatsapp.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-logo">
+          <img src="img/logo.png" alt="Icono de la tienda de chocolate" class="logo-image">
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Inicio</a></li>
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#horario" class="nav-link">Horarios</a></li>
+          <li><a href="#ubicacion" class="nav-link">Ubicacion</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=931533177" class="nav-link">Contacto</a></li>
+        </ul>
+    </div>
+      
+    <div id="whatsapp-button">
+      <a href="https://api.whatsapp.com/send?phone=931533177" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div> 
+      <div class="banner" id="home">
+        <div class="text-container">
+          <h1>Bienvenido a Lutch Pet</h1>
+          <p>Ofrecemos cuidado y atención para tus mascotas</p>
+          <a href="#productos" class="button">Ver más</a>
+        </div>
+        <img src="img/banner.png" alt="Imagen de fondo del banner" class="banner-image">
+      </div>
+
+
+
+      <div class="section-products" id="productos">
+        <div class="tittle">
+            <h1>Productos</h1>
+            <p>Explora nuestra selección de productos de alta calidad.</p>
+        </div>
+        
+        <div id="product-section">
+        
+            <div class="product-item">
+              <img src="img/comida.png" alt="Product 1" />
+              <div class="product-details">
+                <h3>Comida para mascotas</h3>
+                <p>Encuentra comida para tus mascotas, tenemos productos de buena calidad.</p>
+                <a href="productos/producto.html">
+                  <button>Ver más</button>
+                </a>
+              </div>
+            </div>
+          
+            <div class="product-item">
+              <img src="img/accesorios.png" alt="Product 2" />
+              <div class="product-details">
+                <h3>Accesorios</h3>
+                <p>Encuentra las variedades de accesorios para los engreidos del hogar</p>
+                <a href="productos/producto.html">
+                  <button>Ver más</button>
+                </a>
+              </div>
+            </div>
+          
+            <div class="product-item">
+              <img src="img/limpieza.png" alt="Product 3" />
+              <div class="product-details">
+                <h3>Higiene Canina</h3>
+                <p>Tenemos productos de limpieza para mantener la higiene de tus mascotas.</p>
+                <a href="productos/producto.html">
+                  <button>Ver más</button>
+                </a>
+              </div>
+            </div>
+
+            <div class="product-item">
+                <img src="img/cuidado.png" alt="Product 4" />
+                <div class="product-details">
+                  <h3>Control de parasitos</h3>
+                  <p>Ofrecemos antiparasitarios, antipulgas, shampoos medicados, entre otros.</p>
+                  <a href="productos/producto.html">
+                    <button>Ver más</button>
+                  </a>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="container-section" id="servicios">
+        <div class="tittle-service">
+          <h1>Servicios</h1>
+          <p>Explora todos los servicios que ofrecemos para el cuidado de tu mascota.</p>
+        </div>
+        <div id="services-section">
+          <div class="service active">
+            <img src="img/consulta.png" alt="Imagen 1">
+            <h2>Consultas veterinarias</h2>
+            <p>Ofrecemos consultas veterinarias profesionales para garantizar la salud y bienestar de tu mascota.</p>
+          </div>
+          <div class="service">
+            <img src="img/vacuna.png" alt="Imagen 2">
+            <h2>Vacunación</h2>
+            <p>Realizamos vacunaciones completas y actualizadas para proteger a tu mascota de enfermedades.</p>
+          </div>
+          <div class="service">
+            <img src="img/parasitos.png" alt="Imagen 3">
+            <h2>Desparasitación</h2>
+            <p>Eliminamos eficazmente los parásitos internos y externos que puedan afectar a tu mascota.</p>
+          </div>
+          <div class="service">
+            <img src="img/castracion.png" alt="Imagen 4">
+            <h2>Esterilización y castración</h2>
+            <p>Realizamos procedimientos seguros de esterilización y castración para controlar la reproducción y promover la salud de tu mascota.</p>
+          </div>
+          <div class="service">
+            <img src="img/corte.png" alt="Imagen 5">
+            <h2>Corte de pelo</h2>
+            <p>Ofrecemos servicios profesionales de corte de pelo para mantener a tu mascota limpia, cómoda y con un aspecto cuidado.</p>
+          </div>
+          <div class="service">
+            <img src="img/baño.png" alt="Imagen 6">
+            <h2>Baño</h2>
+            <p>Realizamos baños completos y personalizados para mantener a tu mascota con una higiene adecuada.</p>
+          </div>
+          <div class="service">
+            <img src="img/cirugia.png" alt="Imagen 7">
+            <h2>Cirugía</h2>
+            <p>Realizamos cirugías veterinarias seguras y necesarias para tratar diversas condiciones de salud en tu mascota.</p>
+          </div>
+        </div>      
+      </div>
+
+      <div class="container-horario" id="horario">
+        <h1>Horarios de Atención</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Horario mañana</th>
+              <th>Horario tarde</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lunes</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Martes</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Miércoles</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Jueves</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Viernes</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Sábado</td>
+              <td>7:30 - 12:30</td>
+              <td>2:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Domingo</td>
+              <td>8:00 - 1:00</td>
+              <td>cerrado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="horarios-ubicacion-container" id="ubicacion">
+        <div class="tittle-ubi">
+          <h1>Ubicación</h1>
+        </div>
+        <div class="cont">
+          <!--primera columna-->
+        <div class="contact-info">
+          <div class="direccion">
+            <h3>Dirección:</h3>
+            <p class="direccion-texto">C.F.B Pampa Yurac, Jr. Luis Vasquez Suyo, Mz159 lote 11</p>
+          </div>
+          <div class="numeros-contacto">
+            <h3>Números de Contacto:</h3>
+            <p class="numero-celular">Celular: <span class="numero-secundario">931-533-177</span></p>
+          </div>
+          <div class="email">
+            <h3>Email:</h3>
+            <p class="email-texto">info@luchopet.com</p>
+          </div>
+        </div>
+        <!--segunda columna-->
+        <div id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.25854574992502!2d-75.5162156744543!3d-9.051290312734574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a69b04ce757bf9%3A0xc223efe981d3f10f!2sVeterinaria%20Lutch%20Pet!5e0!3m2!1ses!2spe!4v1689210793358!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="local">
+          <img src="img/local.png" alt="local">
+        </div>
+        </div>
+        
+      </div>
+
+            
+
+      <footer>
+        <div class="container-footer">
+          <div class="logo">
+            <img src="img/logo.png" alt="Lutch Pet">
+          </div>
+          <div class="contact-info">
+            <h4>Contacto</h4>
+            <p>Dirección: C.F.B Pampa Yurac, Jr. Luis Vasquez Suyo, Mz159 lote 11</p>
+            <p>Teléfono: +51 931 533 177</p>
+            <p>Email: info@luchopet.com</p>
+          </div>
+          <div class="social-media">
+            <h4>Síguenos en redes sociales</h4>
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="disclaimer">
+          <p>Todos los derechos reservados &copy; Lutch Pet</p>
+        </div>
+      </footer>
+      <script src="nav/nav.js"></script>
+      <script src="script.js"></script>
+</body>
+</html>
